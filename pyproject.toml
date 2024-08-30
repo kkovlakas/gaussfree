@@ -20,8 +20,6 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Topic :: Scientific/Engineering :: Mathematics"
 ]
-
-# Dependencies required to install your package
 dependencies = [
     "numpy>=1.24.4",
     "matplotlib>=3.7.5",
@@ -33,10 +31,5 @@ homepage = "https://github.com/kkovlakas/gaussfree"
 # Documentation = "https://your-package-name.readthedocs.io/en/latest/"
 
 [tool.setuptools]
-# Optional: Include additional configuration for setuptools if necessary
 package-dir = {""="src"}
 packages = ["gaussfree"]
-
-[tool.setuptools.package-data]
-# Specify non-Python files to include
-# "your_package_name" = ["data/*.csv"]

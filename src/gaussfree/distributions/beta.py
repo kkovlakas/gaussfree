@@ -22,7 +22,7 @@ def get_unimodal_beta(mode, variance, verbose=False):
     mode : float
         The mode of the resulting beta distribution.
     variance : float
-        The variance of the resulting beta distribution. Must be less than 1/12.
+        The variance of the resulting beta distribution. Must be < 1/12.
     verbose : bool
         If True, print verbose output and plot the prior distribution.
 
@@ -67,7 +67,6 @@ def get_unimodal_beta(mode, variance, verbose=False):
     if not np.isclose(mode, rec_mode) and np.isclose(variance, rec_variance):
         raise AssertionError("Failed to recover the input mode and variance."
                              "Run with verbose=True to see the details.")
-
 
     dist = st.beta(a, b)
     if verbose:
