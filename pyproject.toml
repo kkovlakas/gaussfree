@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gaussfree"
+version = "0.1.0"
+description = "Tools for non-Gaussian statistics."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name="Konstantinos Kovlakas", email="kkovla@gmail.com"}]
+keywords = ["Statistics", "non-Gaussian", "Python"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Mathematics"
+]
+
+# Dependencies required to install your package
+dependencies = [
+    "numpy>=1.23",
+    "scipy>=1.10"
+]
+
+[project.urls]
+homepage = "https://github.com/kkovlakas/gaussfree"
+# Documentation = "https://your-package-name.readthedocs.io/en/latest/"
+
+[tool.setuptools]
+# Optional: Include additional configuration for setuptools if necessary
+package-dir = {""="src"}
+packages = ["gaussfree"]
+
+[tool.setuptools.package-data]
+# Specify non-Python files to include
+# "your_package_name" = ["data/*.csv"]
