@@ -23,8 +23,9 @@ classifiers = [
 
 # Dependencies required to install your package
 dependencies = [
-    "numpy>=1.23",
-    "scipy>=1.10"
+    "numpy>=1.24.4",
+    "matplotlib>=3.7.5",
+    "scipy>=1.10.1",
 ]
 
 [project.urls]
