@@ -26,5 +26,6 @@ gaussfree.estimation
    :template: custom-module-template.rst
    :recursive:
 
-   binomial
+   gaussfree.estimation.binomial
+   gaussfree.estimation.tests
 
