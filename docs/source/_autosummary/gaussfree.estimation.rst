@@ -27,5 +27,4 @@ gaussfree.estimation
    :recursive:
 
    gaussfree.estimation.binomial
-   gaussfree.estimation.tests
 
