@@ -27,5 +27,4 @@ gaussfree.distributions
    :recursive:
 
    gaussfree.distributions.beta
-   gaussfree.distributions.tests
 
