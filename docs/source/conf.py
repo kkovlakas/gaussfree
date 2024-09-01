@@ -36,6 +36,8 @@ extensions = [
     'sphinx.ext.napoleon',  # Supports Google-style and NumPy-style docstrings
     'sphinx.ext.viewcode',  # Links to source code
     'sphinx_mdinclude',
+    'sphinx.ext.mathjax',
+    'sphinx_math_dollar',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

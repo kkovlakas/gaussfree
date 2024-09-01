@@ -26,6 +26,6 @@ gaussfree.distributions
    :template: custom-module-template.rst
    :recursive:
 
-   beta
-   tests
+   gaussfree.distributions.beta
+   gaussfree.distributions.tests
 

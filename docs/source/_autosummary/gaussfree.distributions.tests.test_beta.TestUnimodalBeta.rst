@@ -1,4 +1,4 @@
-gaussfree.distributions.tests.test\_beta.TestUnimodalBeta
+﻿gaussfree.distributions.tests.test\_beta.TestUnimodalBeta
 =========================================================
 
 .. currentmodule:: gaussfree.distributions.tests.test_beta
@@ -40,7 +40,6 @@ gaussfree.distributions.tests.test\_beta.TestUnimodalBeta
       ~TestUnimodalBeta.assertListEqual
       ~TestUnimodalBeta.assertLogs
       ~TestUnimodalBeta.assertMultiLineEqual
-      ~TestUnimodalBeta.assertNoLogs
       ~TestUnimodalBeta.assertNotAlmostEqual
       ~TestUnimodalBeta.assertNotAlmostEquals
       ~TestUnimodalBeta.assertNotEqual

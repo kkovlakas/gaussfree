@@ -1,7 +1,7 @@
-﻿gaussfree
-=========
+gaussfree.estimation.tests
+==========================
 
-.. automodule:: gaussfree
+.. automodule:: gaussfree.estimation.tests
 
    
    
@@ -26,6 +26,5 @@
    :template: custom-module-template.rst
    :recursive:
 
-   gaussfree.distributions
-   gaussfree.estimation
+   gaussfree.estimation.tests.test_binomial_p
 
