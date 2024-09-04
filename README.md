@@ -52,12 +52,12 @@ est = EstimateBinomialP(3, 2)  # trials n=3, successes k=2
 est.report()                  # print result and show posterior
 
 # plot the 68% highest-posterior density interval
-plt.errorbar(0.0, est.mode, yerr[est.err_lo, est.err_hi])
+plt.errorbar(0.0, est.mode, yerr=[[est.err_lo], [est.err_hi]])
 
 print(f"Posterior mean+/-std: {est.mean:.3f} +/- {est.std:.3f}")
 
 
-with_prior = EstimateBinomial(3, 2, prior_dist=my_prior)
+with_prior = EstimateBinomialP(3, 2, prior_dist=my_prior)
 
 ```
 
