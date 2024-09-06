@@ -1,5 +1,8 @@
 name: Deploy Documentation to GitHub Pages
 
+permissions:
+  pages: write     # Allows publishing to GitHub Pages
+
 on:
   push:
     branches:
