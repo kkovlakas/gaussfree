@@ -2,6 +2,7 @@ name: Deploy Documentation to GitHub Pages
 
 permissions:
   pages: write     # Allows publishing to GitHub Pages
+  contents: write  # Ensure the token can push to the repository
 
 on:
   push:
