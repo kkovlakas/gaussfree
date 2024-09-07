@@ -6,6 +6,13 @@ import scipy.stats as st
 import matplotlib.pyplot as plt
 
 
+# This avoid using the deprecated np.trapz for newer versions of numpy
+try:
+    from numpy import trapezoid as np_trapezoid
+except ImportError:
+    from numpy import trapz as np_trapezoid
+
+
 class EstimateBinomialP:
     """Estimator for the success probability in a binomial distribution."""
     def __init__(self, n_trials, n_success, prior_dist=None,
@@ -77,7 +84,7 @@ class EstimateBinomialP:
         """Compute the likelihood, prior, and posterior probabilities."""
         def norm_prob(prob):
             """Normalize a probability defined on the support `self.x`."""
-            return prob / np.trapz(prob, self.x)
+            return prob / np_trapezoid(prob, self.x)
 
         self.x = np.linspace(0.0, 1.0, self.n_points)
         self.likelihood = norm_prob(st.binom.pmf(self.k, self.n, self.x))
