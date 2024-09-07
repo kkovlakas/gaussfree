@@ -1,11 +1,13 @@
 # gaussfree
 
-Tools for non-Gaussian statistics.
+## Tools for non-Gaussian statistics
 
 `gaussfree` is a library aiming at offering tools for
 
-- Statistical operations in situations where the Gaussian ditribution is not correct;
-- Estimation of distirbution parameters avoiding the normal approximation;
+- Statistical operations in situations
+  where the Gaussian ditribution is not correct;
+- Estimation of distirbution parameters
+  avoiding the normal approximation;
 - Bayesian inference; and
 - Additional helper and visualization functions.
 
