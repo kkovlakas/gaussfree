@@ -89,6 +89,13 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 
+<span class="c1"># This avoid using the deprecated np.trapz for newer versions of numpy</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">trapezoid</span> <span class="k">as</span> <span class="n">np_trapezoid</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">trapz</span> <span class="k">as</span> <span class="n">np_trapezoid</span>
+
+
 <div class="viewcode-block" id="EstimateBinomialP"><a class="viewcode-back" href="../../../_autosummary/gaussfree.estimation.binomial.EstimateBinomialP.html#gaussfree.estimation.binomial.EstimateBinomialP">[docs]</a><span class="k">class</span> <span class="nc">EstimateBinomialP</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Estimator for the success probability in a binomial distribution.&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_trials</span><span class="p">,</span> <span class="n">n_success</span><span class="p">,</span> <span class="n">prior_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -160,7 +167,7 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the likelihood, prior, and posterior probabilities.&quot;&quot;&quot;</span>
         <span class="k">def</span> <span class="nf">norm_prob</span><span class="p">(</span><span class="n">prob</span><span class="p">):</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot;Normalize a probability defined on the support `self.x`.&quot;&quot;&quot;</span>
-            <span class="k">return</span> <span class="n">prob</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">prob</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">prob</span> <span class="o">/</span> <span class="n">np_trapezoid</span><span class="p">(</span><span class="n">prob</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_points</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">likelihood</span> <span class="o">=</span> <span class="n">norm_prob</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">binom</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">))</span>
