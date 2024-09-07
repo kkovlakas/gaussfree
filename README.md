@@ -4,10 +4,10 @@ Tools for non-Gaussian statistics.
 
 `gaussfree` is a library aiming at offering tools for
 
-* Statistical operations in situations where the Gaussian ditribution is not correct;
-* Estimation of distribution parameters avoiding the normal approximation;
-* Bayesian inference; and
-* Additional helper and visualization functions.
+- Statistical operations in situations where the Gaussian ditribution is not correct;
+- Estimation of distirbution parameters avoiding the normal approximation;
+- Bayesian inference; and
+- Additional helper and visualization functions.
 
 While it is far from complete, or generic, in its current implementation, this
 is the ultimate goal of the project.
@@ -16,10 +16,8 @@ is the ultimate goal of the project.
 
 For now, the features are rather dedicated to a specific project, but there are plans to extend and generalize them.
 
-* **Feature 1**: Estimation of the binomial parameter $p$ (success probability),
-                 with arbitrary prior distribution.
-* **Feature 2**: Construction of unimodal Beta distributions with a specific
-                 mode and variance.
+- **Feature 1**: Estimation of the binomial parameter $p$ (success probability), with arbitrary prior distribution.
+- **Feature 2**: Construction of unimodal Beta distributions with a specific mode and variance.
 
 ## Installation
 
