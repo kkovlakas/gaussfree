@@ -1,0 +1,41 @@
+name: Deploy Documentation to GitHub Pages
+
+permissions:
+  pages: write     # Allows publishing to GitHub Pages
+  contents: write  # Ensure the token can push to the repository
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install sphinx_mdinclude sphinx-math-dollar sphinx-rtd-theme
+      - name: Install gaussfree
+        run: |
+          pip install -e .
+      - name: Build documentation
+        run: |
+          cd docs
+          make html  # Build your documentation with make
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4  # Deploy the documentation to GitHub Pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub's auto-generated token
+          publish_dir: ./docs/build/html  # Directory where HTML files are generated
