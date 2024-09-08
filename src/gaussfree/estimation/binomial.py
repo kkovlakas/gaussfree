@@ -6,7 +6,7 @@ import scipy.stats as st
 import matplotlib.pyplot as plt
 
 
-# This avoid using the deprecated np.trapz for newer versions of numpy
+# This avoids using the deprecated np.trapz for newer versions of numpy
 try:
     from numpy import trapezoid as np_trapezoid
 except ImportError:
