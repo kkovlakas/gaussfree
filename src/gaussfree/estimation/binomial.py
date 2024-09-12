@@ -13,6 +13,9 @@ except ImportError:
     from numpy import trapz as np_trapezoid
 
 
+PI = 3.14
+
+
 class EstimateBinomialP:
     """Estimator for the success probability in a binomial distribution."""
     def __init__(self, n_trials, n_success, prior_dist=None,
