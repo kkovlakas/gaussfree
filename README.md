@@ -74,4 +74,4 @@ Konstantinos Kovlakas
 
 ## Acknowledgements
 
-I would like to thank Grigoris Maravelias for suggesting publishing my contribution to his paper [link to be added], and his idea on being just the starting point for a more general package.
+I would like to thank Grigoris Maravelias for suggesting publishing my contribution to his paper [https://ui.adsabs.harvard.edu/abs/2025arXiv250401232M/abstract], and his idea on being just the starting point for a more general package.
